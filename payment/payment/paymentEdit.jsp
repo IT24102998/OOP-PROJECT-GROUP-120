@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            background-color: #000;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: #fff;
+            padding: 12px 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #444;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ✅ Sidebar Navigation -->
+<div class="sidebar">
+    <a href="${pageContext.request.contextPath}/dashboard">Dashboard</a>
+    <a href="${pageContext.request.contextPath}/users">Users</a>
+    <a href="${pageContext.request.contextPath}/photographers">Photographers</a>
+    <a href="${pageContext.request.contextPath}/events">Events</a>
+    <a href="${pageContext.request.contextPath}/bookings">Bookings</a>
+    <a href="${pageContext.request.contextPath}/reviews">Reviews</a>
+    <a href="${pageContext.request.contextPath}/Payment" class="active">Payment</a>
+    <a href="${pageContext.request.contextPath}/logout" class="text-danger">Logout</a>
+</div>
+
+<!-- ✅ Content Area -->
+<div class="content">
+    <h2>Edit Payment</h2>
+
+    <form action="${pageContext.request.contextPath}/invoices/update" method="post">
+        <input type="hidden" name="id" value="${invoice.id}"/>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label>Booking ID</label>
+                <input type="number" name="bookingId" class="form-control" value="${invoice.bookingId}" required>
+            </div>
+            <div class="col-md-6">
+                <label>Amount</label>
+                <input type="number" step="0.01" name="amount" class="form-control" value="${invoice.amount}" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label>Date</label>
+                <input type="date" name="date" class="form-control" value="${payment.date}" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="${pageContext.request.contextPath}/Payment" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+</body>
+</html>
