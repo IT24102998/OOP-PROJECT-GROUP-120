@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<!-- ✅ Side Navigation Bar -->
+<!-- Side Navigation Bar -->
 <div class="sidebar">
     <a href="${pageContext.request.contextPath}/dashboard">Dashboard</a>
     <a href="${pageContext.request.contextPath}/users">Users</a>
@@ -47,7 +47,7 @@
     <a href="${pageContext.request.contextPath}/logout" class="text-danger">Logout</a>
 </div>
 
-<!-- ✅ Page Content -->
+<!--Page Content -->
 <div class="content">
     <h2 class="mb-4">Review Management</h2>
     <table class="table table-bordered">
