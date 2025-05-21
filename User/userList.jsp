@@ -37,7 +37,7 @@
 </head>
 <body>
 
-<!-- ✅ Side Navigation Bar -->
+<!-- Side Navigation Bar -->
 <div class="sidebar">
     <a href="${pageContext.request.contextPath}/dashboard">Dashboard</a>
     <a href="${pageContext.request.contextPath}/users" class="active">Users</a>
@@ -49,7 +49,7 @@
     <a href="${pageContext.request.contextPath}/logout" class="text-danger">Logout</a>
 </div>
 
-<!-- ✅ Content Area -->
+<!--Content Area -->
 <div class="content">
     <h2>User Management</h2>
 
