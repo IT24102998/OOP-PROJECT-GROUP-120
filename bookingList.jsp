@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- ✅ Navigation Bar (Black) -->
+<!-- Navigation Bar (Black) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/dashboard">CaptureNow Admin</a>
@@ -34,7 +34,7 @@
     </div>
 </nav>
 
-<!-- ✅ Page Content -->
+<!--Page Content -->
 <div class="container mt-4">
     <h2>Booking Management</h2>
     <a href="${pageContext.request.contextPath}/bookings/process" class="btn btn-primary mb-3">Process Next Booking</a>
