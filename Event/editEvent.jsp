@@ -12,7 +12,7 @@
   <form action="${pageContext.request.contextPath}/events/update" method="post">
     <input type="hidden" name="id" value="${event.id}">
 
-    <%-- Name එක Description විදිහට වෙනස් කරනවා --%>
+    <%-- Name change as Description--%>
     <%-- <div class="mb-3">
       <label for="name" class="form-label">Event Name</label>
       <input type="text" class="form-control" id="name" name="name" value="${event.name}" required>
