@@ -37,7 +37,7 @@
 </head>
 <body>
 
-<!-- ✅ Sidebar Navigation -->
+<!--Sidebar Navigation -->
 <div class="sidebar">
     <a href="${pageContext.request.contextPath}/dashboard">Dashboard</a>
     <a href="${pageContext.request.contextPath}/users">Users</a>
@@ -49,7 +49,7 @@
     <a href="${pageContext.request.contextPath}/logout" class="text-danger">Logout</a>
 </div>
 
-<!-- ✅ Content Area -->
+<!--Content Area -->
 <div class="content">
     <h2>Edit Payment</h2>
 
